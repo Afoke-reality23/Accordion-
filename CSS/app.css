@@ -1,0 +1,145 @@
+@import"https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --light-pink: hsl(275, 100%, 97%);
+    --pink: hsl(281, 83%, 54%);
+    --dark-purple: hsl(292, 42%, 14%);
+    --grayish-purple: hsl(292, 16%, 49%);
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+.main-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Work Sans, sans-serif;
+    background-color: var(--light-pink);
+}
+
+.faq-section {
+    position: relative;
+    top: -15rem;
+    border-radius: 15px;
+    width: 60rem;
+    min-height: 40%;
+    background-color: var(--white);
+    padding: 3rem 4rem 2rem;
+    box-shadow: 10px 20px 40px -40px var(--grayish-purple);
+}
+
+.bg-image {
+    background-image: url('../images/bg-desktop.svg');
+    height: 310px;
+    width: 100%;
+}
+
+.faq-header-text {
+    display: flex;
+    align-items: center;
+    font-size: 5.6rem;
+    gap: 20px;
+    color: var(--dark-purple);
+}
+
+.header-text img {
+    width: 40px;
+}
+
+.questions-list {
+    margin: 2.5rem 0;
+}
+
+.question-container {
+    margin: 2.5rem 0;
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    width: 100%;
+    background-color: transparent;
+    font-weight: 700;
+    cursor: pointer;
+    font-style: normal;
+    font-size: 1.8rem;
+    text-align: left;
+    color: var(--dark-purple);
+
+}
+
+.question:hover {
+    color: var(--pink);
+}
+
+.faq-button-img {
+    position: relative;
+}
+
+.faq-button-img img {
+    width: 2.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: -0.3rem;
+}
+
+.faq-button-img img:nth-child(1) {
+    display: none;
+}
+
+.answer {
+    color: var(--grayish-purple);
+    margin-top: 2rem;
+    max-height: 400px;
+    transition: margin-top .3s, max-height .3s;
+}
+
+.answer.hide {
+    margin-top: 0;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.question-line-divider {
+    height: 1px;
+    width: 100%;
+    background-color: var(--light-pink);
+}
+
+@media screen and (max-width:700px) {
+    .bg-image {
+        background-image: url('../images/bg-pattern-mobile.svg')
+    }
+
+    .main-page {
+        padding: 1.5rem;
+    }
+
+    .faq-section {
+        width: 100%;
+    }
+
+    .question {
+        font-size: 1.6rem;
+    }
+
+    .answer {
+        font-size: 1.4rem;
+    }
+}
